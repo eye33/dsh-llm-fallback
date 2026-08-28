@@ -1,5 +1,7 @@
 # dsh-llm-fallback
 
+> [🇬🇧 English](README.md) · **🇨🇳 中文**
+
 LLM 模型自动降级插件。当某个模型请求失败时，自动切换到下一个配置的模型并重试。
 
 **全部配置通过 DSH 设置界面完成，无需手动编辑任何配置文件。**
@@ -30,10 +32,7 @@ dsh plugin --profile web add dsh-llm-fallback
   name: 'file:/path/to/dsh-llm-fallback'
 ```
 
-1. 打开 DSH → **设置** → 找到 **llm-fallback** 区域
-2. 在 `fallbackChain` 中添加你的 provider+model 配对
-3. 调整 `maxFailuresPerModel` 和 `fallbackOn` 触发条件
-4. 修改即时生效，无需重启
+然后在 DSH **设置界面** 中配置降级链：打开 **设置** → 找到 **llm-fallback** 区域 → 添加 provider+model 配对 → 调整阈值。修改即时生效，无需重启。
 
 ## 设置界面字段说明
 
@@ -79,9 +78,9 @@ fallbackChain:
 
 ## 注意事项
 
-- 插件完全依赖 DSH 设置系统，不读取 `cordis.patch.yml` 中的 config
+- 插件完全依赖 DSH 设置系统，配置不通过 `cordis.patch.yml` 传递
 - 跨 provider 切换时，新 provider 的 API Key 必须已正确配置
-- 建议将 `dsh-llm-retry` 放在本插件之前注册，让它先重试同一模型
+- 本插件独立于 `dsh-llm-retry`，`maxFailuresPerModel` 是唯一的切换判定依据
 
 ## 系统要求
 

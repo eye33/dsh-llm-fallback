@@ -1,6 +1,8 @@
 # dsh-llm-fallback
 
-> LLM model fallback plugin for [DeepSeek Harness](https://github.com/deepseek-ai/dsh)
+> **[🇨🇳 中文版](README.zh.md)** · English
+
+LLM model fallback plugin for [DeepSeek Harness](https://github.com/deepseek-ai/dsh).
 
 Automatically switches to the next configured model when a request fails. All configuration is managed through the **DSH Settings UI** — no manual YAML editing required.
 
