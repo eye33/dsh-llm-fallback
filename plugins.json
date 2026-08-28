@@ -1,0 +1,24 @@
+{
+  "updated": "2025-07-28T00:00:00Z",
+  "count": 1,
+  "categories": {
+    "llm": { "en": "LLM", "zh": "LLM" }
+  },
+  "plugins": [
+    {
+      "name": "dsh-llm-fallback",
+      "owner": "eye33",
+      "url": "https://github.com/eye33/dsh-llm-fallback",
+      "category": "llm",
+      "description": {
+        "en": "Automatically switch to the next configured LLM model when a request fails. Configurable via DSH Settings UI.",
+        "zh": "LLM 模型自动降级插件：请求失败时自动切换到下一个配置的模型，全部配置通过 DSH 设置界面完成。"
+      },
+      "npm": "dsh-llm-fallback",
+      "stars": 0,
+      "downloads": null,
+      "install": "dsh plugin --profile web add dsh-llm-fallback",
+      "added": "2025-07-28"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+# Minimal cordis.patch.yml entry for dsh-llm-fallback
+# The plugin reads all config from DSH Settings UI - no additional config needed here.
+
+# Method 1: npm installed (after `dsh plugin --profile web add dsh-llm-fallback`)
+- id: llm-fallback
+  name: 'dsh-llm-fallback'
+
+# Method 2: local path
+# - id: llm-fallback
+#   name: 'file:/absolute/path/to/dsh-llm-fallback'
