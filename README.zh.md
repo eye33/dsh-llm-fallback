@@ -109,7 +109,20 @@ dsh plugin --profile web add dsh-llm-fallback
 
 然后在 DSH **设置界面** 中配置降级链。
 
-### 方式二：本地路径
+### 方式二：源码打包安装（推荐开发方式）
+
+```bash
+git clone https://github.com/eye33/dsh-llm-fallback.git
+cd dsh-llm-fallback
+pnpm pack
+# 生成 dsh-llm-fallback-0.1.0.tgz
+
+dsh plugin --profile web add ./dsh-llm-fallback-0.1.0.tgz
+```
+
+> **注意**：tgz 包已内置 `cordis.patch.yml`，无需手动编辑配置文件。安装后请删除 `cordis.patch.yml` 中旧的 `file:` 条目。
+
+### 方式三：本地路径直连（仅开发调试用）
 
 在 `cordis.patch.yml` 中添加：
 

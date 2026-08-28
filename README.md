@@ -113,7 +113,20 @@ dsh plugin --profile web add dsh-llm-fallback
 
 Then open **Settings → llm-fallback** in the DSH UI to configure your fallback chain.
 
-### Method 2: Local Path
+### Method 2: From Source (build tgz)
+
+```bash
+git clone https://github.com/eye33/dsh-llm-fallback.git
+cd dsh-llm-fallback
+pnpm pack
+# produces dsh-llm-fallback-0.1.0.tgz
+
+dsh plugin --profile web add ./dsh-llm-fallback-0.1.0.tgz
+```
+
+> **Note**: The tgz package includes `cordis.patch.yml` automatically — no manual patch editing needed. After installation, remove any old `file:` entries from your `cordis.patch.yml`.
+
+### Method 3: Direct file: path (development only)
 
 Add to your `cordis.patch.yml`:
 
