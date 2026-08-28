@@ -1,0 +1,6 @@
+# dsh-llm-fallback bundle entry for DeepSeek Harness (dsh).
+# Registers the plugin so its Host side initializes and its client module
+# becomes available in the Settings UI.
+- insert:
+    - id: llm-fallback
+      name: 'dsh-llm-fallback'
